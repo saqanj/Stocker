@@ -92,7 +92,7 @@ helm repo add ollama-helm https://otwld.github.io/ollama-helm/
 helm repo update
 ```
 ```
-helm install ollama ollama-helm/ollama --namespace (DESIRED NAMESPACE) --values ollama-values.yaml
+helm install ollama ollama-helm/ollama --namespace stk-helm-ollama --values ollama-values.yaml
 ```
 - Once more, ensure you are in the kubernetes directory of this repository as instructed above. Now that each helm-initiated pod is spun up, we must apply the necessary files on kubernetes to have everything running:
 ```

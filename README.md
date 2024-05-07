@@ -125,8 +125,7 @@ kubectl port-forward -n stk-frontendmicroservice service/frontend-service 5010:5
     6. http://127.0.0.1:8080/ai/generate/firstPrompt - This route will generate the first-prompt and provide the AI Analysis that needs to be sent to the Blog-Post Front-End.
     7. http://127.0.0.1:5010/postdata - You can provide the AI output from the previous route to this route as a parameter for the front-end to be displayed.
     8. http://127.0.0.1:5010/ - You can use this to then view your Stock UI Static HTML page with the new Blog Post.
-- For more blog posts to be generated:
-    9. Repeat step 1, 2, 5, and run this route for a new AI Post to be generated: http://127.0.0.1:8080/ai/generate/subsequentPrompts
+    9. For more blog posts to be generated: Repeat steps 1, 2, 5, and run this route for a new AI Post to be generated: http://127.0.0.1:8080/ai/generate/subsequentPrompts
     10. You can then use step 7 and 8 to view updated blog posts after doing step 9.
  # Executing Builds
  - If you make any changes to the AIClientMicroservice, you must execute the following to update the application as a whole on Kubernetes:

@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: poster-deployment
-  namespace: stk-poster
+  name: frontend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: poster
+      app: frontend
   template:
     metadata:
       labels:
-        app: poster
+        app: frontend
     spec:
       containers:
-      - name: poster-container
+      - name: frontend-container
         image: tethmado/chatpost:4.0
         ports:
         - containerPort: 5010

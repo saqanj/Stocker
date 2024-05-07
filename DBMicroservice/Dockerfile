@@ -21,7 +21,3 @@ ENV FLASK_APP=app.py
 
 # Run app.py when the container launches
 CMD ["flask", "run", "--host=0.0.0.0"]
-
-# docker build -t stocker-app .
-# docker run -d -p 5001:5000 --name my-stock-app stock-app
-

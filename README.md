@@ -41,8 +41,8 @@
   - [Postman Docs](https://learning.postman.com/docs/introduction/overview/)
 
  
- # UI Description + Primary Actions
-- A simple static.html page in the Front End Microservice is the project's front-end. The blog post is updated using Post from Postman with the blog-post generated from previous rest calls.
+ # Features / Minimum Viable Product Goals
+- A simple static.html page in the Front End Microservice is the project's display of a minimum viable product successfully functioning. If execution directions are followed, the application should support the creation of a simple AI-Generated Stock Blog-Post on this HTML Front-End that you should be able to access in your browser!
 
 # Executing the Application 
 - In order to proceed with this, ensure that you have at least 16GB Ram on your local machine. This project was tested using a Macbook Pro with an Apple Silicon M1 Chip and 16GB Ram. Another machine of similar or more specs would be required. On your local kubernetes cluster, create the following namspaces:

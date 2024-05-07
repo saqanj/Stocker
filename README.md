@@ -32,9 +32,11 @@
 # Sources
 - Here is a list of all open-source resources utilized to make Stocker possible:
   - [MySQL Helm](https://artifacthub.io/packages/helm/bitnami/mysql)
+  - [Ollama Helm](https://artifacthub.io/packages/helm/ollama-helm/ollama?modal=values)
   - [SpringAI Docs for OpenAI](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html)
   - [YahooFinance Data Collection](https://github.com/TheMultivariateAnalyst/Finance_Database_SQL)
   - [Postman Docs](https://learning.postman.com/docs/introduction/overview/)
+
  
  # UI Description + Primary Actions
 - A simple static.html page in the Front End Microservice is the project's front-end. The blog post is updated using Post from Postman with the blog-post generated from previous rest calls.

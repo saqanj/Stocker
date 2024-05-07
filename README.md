@@ -113,12 +113,12 @@ kubectl port-forward -n stk-dbmicroservice service/stock-app-service 5000:5000
 ```
 kubectl port-forward -n stk-postermicroservice service/frontend-service 5010:5010
 ```
-- Once each microservice is port-forwarded, you can use the IP address listed upon port-forwarding to access different routes directly on your browser, or use Postman Collections. The routes accessed are indicated in the following links sequentially:
+- Once each microservice is port-forwarded, you can use the IP address listed upon port-forwarding to create Postman Routes under a given collection. Documentation on using Postman is provided in the Sources section if there are any questions on creating a Postman Collection. The routes accessed are indicated in the following links sequentially for your collection:
     1. http://127.0.0.1:5000/start_fetching - This route will initiate the stock-data fetching process.
-    2. http://127.0.0.1:5000/all_stock_data - This will display the fetched stock-data in JSON format. You must store this, or have this displayed in your Postman Collection.
+    2. http://127.0.0.1:5000/all_stock_data - This will display the fetched stock-data in JSON format.
     3. http://127.0.0.1:8080/ai/generate/beginConversation - This route begins the conversation with Mistral.
     4. http://127.0.0.1:8080/ai/generate/introduceAssignment - This route lets Mistral know what it must do for the Blog Post.
-    5. http://127.0.0.1:8080/ai/generate/updateData - You can provide the stored Stock data as a parameter to this route on your Postman Collection.
+    5. http://127.0.0.1:8080/ai/generate/updateData - You can provide the stored Stock Data from Step 2 as a parameter to this route on your Postman Collection.
     6. http://127.0.0.1:8080/ai/generate/firstPrompt - This route will generate the first-prompt and provide the AI Analysis that needs to be sent to the Blog-Post Front-End.
     7. http://127.0.0.1:5010/postdata - You can provide the AI output from the previous route to this route as a parameter for the front-end to be displayed.
     8. http://127.0.0.1:5010/ - You can use this to then view your Stock UI Static HTML page with the new Blog Post.

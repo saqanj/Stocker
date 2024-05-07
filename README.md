@@ -126,7 +126,36 @@ kubectl port-forward -n stk-postermicroservice service/frontend-service 5010:501
 - For more blog posts to be generated:
     9. Repeat step 1, 2, 5, and run this route for a new AI Post to be generated: http://127.0.0.1:8080/ai/generate/subsequentPrompts
     10. You can then use step 7 and 8 to view updated blog posts after doing step 9.
- 
+ # Executing Builds
+ - If you make any changes to the AIClientMicroservice, you must execute the following to update the application as a whole on Kubernetes:
+```
+./gradlew clean
+```
+```
+./gradlew build
+```
+```
+docker build -t (YOUR DOCKERHUBNAME)/(IMAGETAG):(VERSIONTAG) .
+```
+```
+docker login
+```
+```
+docker push
+```
+- Change the container name in the aiclient-deployment.yaml to your Dockerhub Container name you pushed to dockerhub.
+- If you make any changes to DBMicroservice or Front-End Microservice execute the following builds:
+```
+docker build -t (YOUR DOCKERHUBNAME)/(IMAGETAG):(VERSIONTAG) .
+```
+```
+docker login
+```
+```
+docker push
+```
+- Once more, change the container name in the frontend-deployment.yaml and or db-deployment.yaml to your container image name on Dockerhub.
+  
 # Lessons Learned & Project Recap
 - CI/CD Pipelines! Having automated CI/CD Pipelines for building Docker Containers, and re-applying Kubernetes files is a MUST! This project was done using manual build and re-deployments and it was a huge hassle.
 - Know your cluster limits! Had we known about the GKE Hardware Limitations earlier, we would have had a completely different architecture for our project than was initially saught out. 

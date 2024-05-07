@@ -52,6 +52,9 @@ kubectl create namespace stk-dbmicroservice
 ```
 kubectl create namespace stk-frontendmicroservice
 ```
+```
+kubectl create namespace stk-helm-ollama
+```
 - Ensure the following for using a helm-chart on your machine:
 ```
 brew install helm
@@ -90,4 +93,37 @@ helm repo update
 ```
 helm install ollama ollama-helm/ollama --namespace (DESIRED NAMESPACE) --values ollama-values.yaml
 ```
+- Once more, ensure you are in the kubernetes directory of this repository as instructed above. Now that each helm-initiated pod is spun up, we must apply the necessary files on kubernetes to have everything running:
+```
+kubectl apply -f aiclient-deployment.yaml -f aiclient-service.yaml -f aiclient-configmap.yaml -n stk-aimicroservice
+```
+```
+kubectl apply -f db-deployment.yaml -f db-service.yaml -f db-configmap.yaml -n stk-dbmicroservice
+```
+```
+kubectl apply -f poster-deployment.yaml -f poster-service.yaml -n stk-postermicroservice
+```
+- You must also port-forward each microservice like so:
+```
+kubectl port-forward -n stk-aimicroservice service/aiclient-service 8080:8080
+```
+```
+kubectl port-forward -n stk-dbmicroservice service/stock-app-service 5000:5000
+```
+```
+kubectl port-forward -n stk-postermicroservice service/frontend-service 5010:5010
+```
+- Once each microservice is port-forwarded, you can use the IP address listed upon port-forwarding to access different routes directly on your browser, or use Postman Collections. The routes accessed are indicated in the following links sequentially:
+    1. http://127.0.0.1:5000/start_fetching - This route will initiate the stock-data fetching process.
+    2. http://127.0.0.1:5000/all_stock_data - This will display the fetched stock-data in JSON format. You must store this, or have this displayed in your Postman Collection.
+    3. http://127.0.0.1:8080/ai/generate/beginConversation - This route begins the conversation with Mistral.
+    4. http://127.0.0.1:8080/ai/generate/introduceAssignment - This route lets Mistral know what it must do for the Blog Post.
+    5. http://127.0.0.1:8080/ai/generate/updateData - You can provide the stored Stock data as a parameter to this route on your Postman Collection.
+    6. http://127.0.0.1:8080/ai/generate/firstPrompt - This route will generate the first-prompt and provide the AI Analysis that needs to be sent to the Blog-Post Front-End.
+    7. http://127.0.0.1:5010/postdata - You can provide the AI output from the previous route to this route as a parameter for the front-end to be displayed.
+    8. http://127.0.0.1:5010/ - You can use this to then view your Stock UI Static HTML page with the new Blog Post.
+    9. Repeat step 1, 2, 5, and run this route for a new AI Post to be generated: http://127.0.0.1:8080/ai/generate/subsequentPrompts
+    10. You can then use step 7 and 8 to view updated blog posts.
+ 
+# Lessons Learned & Project Recap
 - 

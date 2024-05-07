@@ -9,7 +9,7 @@
 - Kwadwo Osarfo-Akoto, kosarfoa@trincoll.edu
 - Joachim Chuah, jchuah@trincoll.edu 
 
-# UML
+# Component Diagram
 ![Project UML](https://github.com/saqanj/Stocker/assets/134897920/6e317f50-3b64-410b-8fbf-49d9fcaf55b6)
 
 # Languages and Frameworks

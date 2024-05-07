@@ -36,7 +36,7 @@
 - Here is a list of all open-source resources utilized to make Stocker possible:
   - [MySQL Helm](https://artifacthub.io/packages/helm/bitnami/mysql)
   - [Ollama Helm](https://artifacthub.io/packages/helm/ollama-helm/ollama?modal=values)
-  - [SpringAI Docs for OpenAI](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html)
+  - [SpringAI Docs for Ollama](https://docs.spring.io/spring-ai/reference/api/clients/ollama-chat.html)
   - [YahooFinance Data Collection](https://github.com/TheMultivariateAnalyst/Finance_Database_SQL)
   - [Postman Docs](https://learning.postman.com/docs/introduction/overview/)
 

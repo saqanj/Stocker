@@ -58,7 +58,7 @@ kubectl create namespace stk-frontendmicroservice
 ```
 kubectl create namespace stk-helm-ollama
 ```
-- Ensure the following for using a helm-chart on your machine:
+- Ensure the following for using a helm-chart on your machine if you have MacOS and brew installed:
 ```
 brew install helm
 ```

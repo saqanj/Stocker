@@ -9,17 +9,3 @@ ollama:
 persistentValues:
 
   enabled: true
-
-
-
-resources:
-
-  limits:
-
-    ephemeral-storage: 5Gi
-
-  requests:
-
-    ephemeral-storage: 5Gi
-
-    memory: 2Gi

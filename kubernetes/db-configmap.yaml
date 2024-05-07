@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stock-app-config
+  namespace: stk-dbmicroservice
+data:
+  DB_HOST: "my-mysql.stk-helm-mysql.svc.cluster.local"
+  DB_PORT: "3306"
+  DB_USER: "root"
+  DB_PASS: "mypassword"
+  FETCH_INTERVAL_SECONDS: "40"

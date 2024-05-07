@@ -1,0 +1,15 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: poster-service
+  namespace: stk-poster
+spec:
+  selector:
+    app: poster
+  ports:
+    - name: default-port
+      protocol: TCP
+      port: 5010
+      targetPort: 5010
+

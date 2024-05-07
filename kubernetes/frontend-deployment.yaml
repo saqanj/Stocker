@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poster-deployment
+  namespace: stk-poster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poster
+  template:
+    metadata:
+      labels:
+        app: poster
+    spec:
+      containers:
+      - name: poster-container
+        image: tethmado/chatpost:4.0
+        ports:
+        - containerPort: 5010
+
+

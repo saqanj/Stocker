@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stock-app-service
+  namespace: stk-dbmicroservice
+spec:
+  type: ClusterIP
+  selector:
+    app: stock-fetcher
+  ports:
+    - name: main-app
+      protocol: TCP
+      port: 5000
+      targetPort: 5000

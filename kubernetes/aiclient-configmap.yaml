@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aiclient-configmap
+data:
+  application.properties: |
+    spring.application.name=AIClientMicroservice
+    spring.ai.ollama.base-url=http://localhost:11434
+    spring.ai.ollama.chat.options.model=mistral
+    spring.ai.ollama.chat.options.temperature=0.7

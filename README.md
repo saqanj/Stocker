@@ -31,7 +31,6 @@
 
 # Sources
 - Here is a list of all open-source resources utilized to make Stocker possible:
-  - [Ghost Helm](https://artifacthub.io/packages/helm/bitnami/ghost)
   - [MySQL Helm](https://artifacthub.io/packages/helm/bitnami/mysql)
   - [SpringAI Docs for OpenAI](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html)
   - [YahooFinance Data Collection](https://github.com/TheMultivariateAnalyst/Finance_Database_SQL)

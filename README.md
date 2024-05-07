@@ -102,7 +102,7 @@ kubectl apply -f aiclient-deployment.yaml -f aiclient-service.yaml -f aiclient-c
 kubectl apply -f db-deployment.yaml -f db-service.yaml -f db-configmap.yaml -n stk-dbmicroservice
 ```
 ```
-kubectl apply -f poster-deployment.yaml -f poster-service.yaml -n stk-postermicroservice
+kubectl apply -f frontend-deployment.yaml -f frontend-service.yaml -n stk-postermicroservice
 ```
 - You must also port-forward each microservice like so:
 ```

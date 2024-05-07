@@ -102,7 +102,7 @@ kubectl apply -f aiclient-deployment.yaml -f aiclient-service.yaml -f aiclient-c
 kubectl apply -f db-deployment.yaml -f db-service.yaml -f db-configmap.yaml -n stk-dbmicroservice
 ```
 ```
-kubectl apply -f frontend-deployment.yaml -f frontend-service.yaml -n stk-postermicroservice
+kubectl apply -f frontend-deployment.yaml -f frontend-service.yaml -n stk-frontendmicroservice
 ```
 - You must also port-forward each microservice like so:
 ```
@@ -112,7 +112,7 @@ kubectl port-forward -n stk-aimicroservice service/aiclient-service 8080:8080
 kubectl port-forward -n stk-dbmicroservice service/stock-app-service 5000:5000
 ```
 ```
-kubectl port-forward -n stk-postermicroservice service/frontend-service 5010:5010
+kubectl port-forward -n stk-frontendmicroservice service/frontend-service 5010:5010
 ```
 - Once each microservice is port-forwarded, you can use the IP address listed upon port-forwarding to create Postman Routes under a given collection. Documentation on using Postman is provided in the Sources section if there are any questions on creating a Postman Collection. The routes accessed are indicated in the following links sequentially for your collection:
     1. http://127.0.0.1:5000/start_fetching - This route will initiate the stock-data fetching process.

@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stock-fetcher-deployment
+  name: db-deployment
   namespace: stk-dbmicroservice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: stock-fetcher
+      app: db
   template:
     metadata:
       labels:
-        app: stock-fetcher
+        app: db
     spec:
       containers:
-      - name: stock-fetcher
+      - name: db
         image: tethmado/db:0.0.1
         ports:
         - containerPort: 5000
         envFrom:
         - configMapRef:
-            name: stock-app-config
+            name: db-config
 

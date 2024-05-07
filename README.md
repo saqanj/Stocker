@@ -34,6 +34,7 @@
   - [MySQL Helm](https://artifacthub.io/packages/helm/bitnami/mysql)
   - [SpringAI Docs for OpenAI](https://docs.spring.io/spring-ai/reference/api/clients/openai-chat.html)
   - [YahooFinance Data Collection](https://github.com/TheMultivariateAnalyst/Finance_Database_SQL)
+  - [Postman Docs](https://learning.postman.com/docs/introduction/overview/)
  
  # UI Description + Primary Actions
 - A simple static.html page in the Front End Microservice is the project's front-end. The blog post is updated using Post from Postman with the blog-post generated from previous rest calls.

@@ -154,10 +154,10 @@ docker login
 ```
 docker push
 ```
-- Once more, change the container name in the frontend-deployment.yaml and or db-deployment.yaml to your container image name on Dockerhub.
+- Once more, change the container name in the frontend-deployment.yaml and or db-deployment.yaml to your container image name on Dockerhub. Be certain of the version tags matching!
   
 # Lessons Learned & Project Recap
-- CI/CD Pipelines! Having automated CI/CD Pipelines for building Docker Containers, and re-applying Kubernetes files is a MUST! This project was done using manual build and re-deployments and it was a huge hassle.
+- CI/CD Pipelines! Having automated CI/CD Pipelines for building Docker Containers, and re-applying Kubernetes files is a MUST! This project was done using manual build and re-deployments and it was a huge hassle. A future iteration of this might have Github Workflows to handle this.
 - Know your cluster limits! Had we known about the GKE Hardware Limitations earlier, we would have had a completely different architecture for our project than was initially saught out. 
 - Teamwork makes the dreamwork! "The true Stocker AI was the friends we made along the way" - Kwadwo. This project would not have been possible given the insane turbulence with Ollama and how we had originally envisioned using Ghost as our front-end. Having teammates to grind with you into the late hours of the night for a project to work is a crucial thing.
 - Know your dependencies! In addition to the hardware limitations with Ollama, we had not anticipated that Ghost would give so much trouble with implementation on the class cluster because of ephimeral storage. This took a huge chunk of time out of our project, and would have been better spent had we anticipated this occuring. 

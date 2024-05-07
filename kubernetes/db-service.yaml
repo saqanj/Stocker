@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: stock-app-service
+  name: db-service
   namespace: stk-dbmicroservice
 spec:
   type: ClusterIP
   selector:
-    app: stock-fetcher
+    app: db
   ports:
     - name: main-app
       protocol: TCP

@@ -156,6 +156,9 @@ docker login
 docker push
 ```
 - Once more, change the container name in the frontend-deployment.yaml and or db-deployment.yaml to your container image name on Dockerhub. Be certain of the version tags matching!
+# Sample Screenshot of Functioning Blog Post
+<img width="1208" alt="Screen Shot 2024-05-07 at 11 39 44 AM" src="https://github.com/saqanj/Stocker/assets/134897920/5ed860af-08cf-4761-a5ff-09e3faf0f07b">
+
   
 # Lessons Learned & Project Recap
 - CI/CD Pipelines! Having automated CI/CD Pipelines for building Docker Containers, and re-applying Kubernetes files is a MUST! This project was done using manual build and re-deployments and it was a huge hassle. A future iteration of this might have Github Workflows to handle this.

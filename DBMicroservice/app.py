@@ -6,10 +6,6 @@ import threading
 import time as T
 import os
 
-#kubectl port-forward svc/my-mysql 3307:3306 -n mysql
-#curl -X POST http://127.0.0.1:5000/start_fetching
-#curl http://127.0.0.1:5000/all_stock_data
-
 app = Flask(__name__)
 
 # Environment variables for database connection
@@ -72,21 +68,6 @@ def fetch_and_store_stock_data():
                 today = date.today()
                 interval = timedelta(days=365)
                 oneYearBefore = today - interval
-
-                #for name in company_name:
-                #stock = yf.Ticker(name)
-                #result = stock.history(start=str(oneYearBefore), end=str(today))
-
-                #if not result.empty:  # Check if result is not empty
-                #for index, row in result.iterrows():
-                #sql = f"INSERT INTO stockPrediction_oneyearstock(name, time, open, close, high, low, volume) VALUES('{name}', '{index.strftime('%Y-%m-%d')}', {row['Open']}, {row['Close']}, {row['High']}, {row['Low']}, {row['Volume']})"
-                #try:
-                #cursor.execute(sql)
-                #db.commit()
-                #except:
-                #db.rollback()
-                #else:
-                #print(f"No data found for {name}, skipping one year stock data...")
 
                 # Insert one day stock data
                 now = datetime.now()

@@ -5,6 +5,6 @@ metadata:
 data:
   application.properties: |
     spring.application.name=AIClientMicroservice
-    spring.ai.ollama.base-url=http://localhost:11434
+    spring.ai.ollama.base-url=http://ollama.stk-helm-ollama:11434
     spring.ai.ollama.chat.options.model=mistral
     spring.ai.ollama.chat.options.temperature=0.7

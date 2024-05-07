@@ -96,7 +96,7 @@ helm repo update
 ```
 helm install ollama ollama-helm/ollama --namespace stk-helm-ollama --values ollama-values.yaml
 ```
-- Once more, ensure you are in the kubernetes directory of this repository as instructed above. Now that each helm-initiated pod is spun up, we must apply the necessary files on kubernetes to have everything running:
+- Once more, ensure you are in the kubernetes directory of this repository as instructed above. Now that each helm-initiated pod is spun up, we must apply the necessary files on kubernetes to have everything running on your local cluster:
 ```
 kubectl apply -f aiclient-deployment.yaml -f aiclient-service.yaml -f aiclient-configmap.yaml -n stk-aimicroservice
 ```

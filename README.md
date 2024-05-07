@@ -23,6 +23,7 @@
 - REST
 - JSON Data Format
 - Postman
+- Ollama
 
 # Modules
 - Database Microservice

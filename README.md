@@ -19,6 +19,8 @@
 - Kubernetes
 - MySQL
 - Python
+- Flask
+- YahooFinance Python Library
 - Helm 
 - REST
 - JSON Data Format

@@ -13,7 +13,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend-container
+      - name: frontend-cont
         image: tethmado/chatpost:4.0
         ports:
         - containerPort: 5010

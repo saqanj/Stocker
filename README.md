@@ -87,7 +87,7 @@ echo $MYSQL_ROOT_PASSWORD
 ```
 - Then run this command to get it started:
 ```
-kubectl run my-mysql-client --rm --tty -i --restart='Never' --image  docker.io/bitnami/mysql:8.0.36-debian-12-r10 --namespace (PREVIOUSLY USED NAMESPACE) --env MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD --command -- bash
+kubectl run my-mysql-client --rm --tty -i --restart='Never' --image  docker.io/bitnami/mysql:8.0.36-debian-12-r10 --namespace stk-dbmicroservice --env MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD --command -- bash
 ```
 - Type "exit" to get out of the MySQL pod you just spun up on Kubernetes. Now, run the following commands sequentially for spinning up Ollama using helm:
 ```

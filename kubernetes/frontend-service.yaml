@@ -10,5 +10,5 @@ spec:
     - name: default-port
       protocol: TCP
       port: 5010
-      targetPort: frontend-container
+      targetPort: frontend-cont
 
